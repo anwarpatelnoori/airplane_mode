@@ -4,6 +4,9 @@ app_publisher = "anwarpatelnoori"
 app_description = "airplane_mode"
 app_email = "anwarpatelrazvi@gmail.com"
 app_license = "mit"
+
+website_generators = ["Airplane Flight"]
+
 # required_apps = []
 
 # Includes in <head>
