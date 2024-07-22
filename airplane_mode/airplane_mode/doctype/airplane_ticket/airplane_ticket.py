@@ -33,5 +33,12 @@ class AirplaneTicket(Document):
         string = 'ABCDE'
         random_string = random.choice(string)
         seat_number = str(random_int) + random_string
-        self.seat = seat_number	
+        self.seat = seat_number
+    def before_insert(self):
+        all_tickets = frappe.get_all('Airplane Ticket')
+        airplane = frappe.db.get_value('Airplane Flight',self.flight,'airplane')
+        capacity = frappe.db.get_value('Airplane',airplane,'capacity')
+        if capacity<=len(all_tickets):
+            frappe.throw(f'All tickets of this flight {self.flight} is Filled:(')
+
     
