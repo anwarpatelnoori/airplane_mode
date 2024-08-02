@@ -10,12 +10,13 @@
   "section_break_rjna",
   "shop_number",
   "airport",
-  "airport_code",
   "last_maintenance_date",
+  "shop_rent",
   "column_break_nqad",
-  "shop_name",
-  "area",
-  "next_maintenance_date"
+  "shop_category",
+  "airport_code",
+  "next_maintenance_date",
+  "area"
  ],
  "fields": [
   {
@@ -27,12 +28,6 @@
    "unique": 1
   },
   {
-   "fieldname": "shop_name",
-   "fieldtype": "Select",
-   "label": "Shop Category",
-   "options": "\nClothing  Stores\nBookstores and Newsstands\nRestaurants and Diners\nCurrency Exchange and Banks\nHealth and Pharmacy\u00a0Stores\nGift Shops Rent"
-  },
-  {
    "description": "In sqft",
    "fieldname": "area",
    "fieldtype": "Float",
@@ -42,7 +37,9 @@
   {
    "fieldname": "airport",
    "fieldtype": "Link",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Airport",
    "options": "Airport",
    "reqd": 1
@@ -73,15 +70,30 @@
   },
   {
    "fetch_from": "airport.code",
+   "fetch_if_empty": 1,
    "fieldname": "airport_code",
    "fieldtype": "Read Only",
-   "hidden": 1,
    "label": "Airport Code"
+  },
+  {
+   "fieldname": "shop_category",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop Category",
+   "options": "\nClothing Stores\nBookstores and Newsstands\nRestaurants and Diners\nCurrency Exchange and Banks\nHealth and Pharmacy Stores\nGift Shops Rent"
+  },
+  {
+   "fieldname": "shop_rent",
+   "fieldtype": "Currency",
+   "label": "Shop Rent",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-02 14:14:35.554862",
+ "modified": "2024-08-03 02:40:20.544892",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",

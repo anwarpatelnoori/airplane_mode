@@ -9,13 +9,13 @@
   "column_break_vrtg",
   "reminder_frequency",
   "section_break_amfl",
-  "clothing_store_rent",
+  "clothing_stores",
   "gift_shops_rent",
-  "health_clinic_rent",
+  "health_and_pharmacy_stores",
   "column_break_eopp",
-  "bookstores_and_newsstands_shop_rent",
-  "currency_exchange_and_banks_shop_rent",
-  "restaurants_and_diners_shop_rent"
+  "bookstores_and_newsstands",
+  "currency_exchange_and_banks",
+  "restaurants_and_diners"
  ],
  "fields": [
   {
@@ -25,48 +25,20 @@
    "label": "Enable Rent Reminders"
   },
   {
-   "fieldname": "clothing_store_rent",
-   "fieldtype": "Currency",
-   "label": "Clothing Store Rent",
-   "precision": "2"
-  },
-  {
-   "fieldname": "bookstores_and_newsstands_shop_rent",
-   "fieldtype": "Currency",
-   "label": "Bookstores and Newsstands Shop Rent",
-   "precision": "2"
-  },
-  {
+   "default": "20,000.00",
    "fieldname": "gift_shops_rent",
    "fieldtype": "Currency",
    "label": "Gift Shops Rent",
    "precision": "2"
   },
   {
-   "fieldname": "restaurants_and_diners_shop_rent",
-   "fieldtype": "Currency",
-   "label": "Restaurants and Diners Shop Rent",
-   "precision": "2"
-  },
-  {
-   "fieldname": "currency_exchange_and_banks_shop_rent",
-   "fieldtype": "Currency",
-   "label": "Currency Exchange and Banks SHop Rent",
-   "precision": "2"
-  },
-  {
    "fieldname": "section_break_amfl",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Different Shops Renst"
   },
   {
    "fieldname": "column_break_eopp",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "health_clinic_rent",
-   "fieldtype": "Currency",
-   "label": "Health Clinic Rent",
-   "precision": "2"
   },
   {
    "fieldname": "column_break_vrtg",
@@ -77,12 +49,47 @@
    "fieldtype": "Select",
    "label": "Reminder Frequency",
    "options": "1 Day Before\n2 Day Before\n3 Day Before"
+  },
+  {
+   "default": "25,000.00",
+   "fieldname": "clothing_stores",
+   "fieldtype": "Currency",
+   "label": "Clothing Stores",
+   "precision": "2"
+  },
+  {
+   "default": "50,000.00",
+   "fieldname": "health_and_pharmacy_stores",
+   "fieldtype": "Currency",
+   "label": "Health and Pharmacy Stores",
+   "precision": "2"
+  },
+  {
+   "default": "15,000.00",
+   "fieldname": "bookstores_and_newsstands",
+   "fieldtype": "Currency",
+   "label": "Bookstores and Newsstands",
+   "precision": "2"
+  },
+  {
+   "default": "40,000.00",
+   "fieldname": "restaurants_and_diners",
+   "fieldtype": "Currency",
+   "label": "Restaurants and Diners",
+   "precision": "2"
+  },
+  {
+   "default": "60000",
+   "fieldname": "currency_exchange_and_banks",
+   "fieldtype": "Currency",
+   "label": " Currency Exchange and Banks",
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-02 16:39:18.362880",
+ "modified": "2024-08-03 03:01:34.071670",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Management Settings",
