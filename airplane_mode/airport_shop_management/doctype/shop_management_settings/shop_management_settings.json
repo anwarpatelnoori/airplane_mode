@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-02 13:14:42.466791",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_rent_reminders",
+  "column_break_vrtg",
+  "reminder_frequency",
+  "section_break_amfl",
+  "clothing_store_rent",
+  "gift_shops_rent",
+  "health_clinic_rent",
+  "column_break_eopp",
+  "bookstores_and_newsstands_shop_rent",
+  "currency_exchange_and_banks_shop_rent",
+  "restaurants_and_diners_shop_rent"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_rent_reminders",
+   "fieldtype": "Check",
+   "label": "Enable Rent Reminders"
+  },
+  {
+   "fieldname": "clothing_store_rent",
+   "fieldtype": "Currency",
+   "label": "Clothing Store Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "bookstores_and_newsstands_shop_rent",
+   "fieldtype": "Currency",
+   "label": "Bookstores and Newsstands Shop Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "gift_shops_rent",
+   "fieldtype": "Currency",
+   "label": "Gift Shops Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "restaurants_and_diners_shop_rent",
+   "fieldtype": "Currency",
+   "label": "Restaurants and Diners Shop Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "currency_exchange_and_banks_shop_rent",
+   "fieldtype": "Currency",
+   "label": "Currency Exchange and Banks SHop Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_amfl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_eopp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "health_clinic_rent",
+   "fieldtype": "Currency",
+   "label": "Health Clinic Rent",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_vrtg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reminder_frequency",
+   "fieldtype": "Select",
+   "label": "Reminder Frequency",
+   "options": "1 Day Before\n2 Day Before\n3 Day Before"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-08-02 16:39:18.362880",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Shop Management Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

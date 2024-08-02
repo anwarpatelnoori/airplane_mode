@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{full_name}-{####}",
+ "creation": "2024-08-02 10:55:38.910137",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "first_name",
+  "aadhar_card_number",
+  "attach_aadhar_card",
+  "column_break_umpi",
+  "last_name",
+  "phone_number",
+  "attach_recent_photo",
+  "column_break_ncem",
+  "full_name",
+  "email",
+  "photo_preview",
+  "address_section_section",
+  "country",
+  "state",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "aadhar_card_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Aadhar Card Number",
+   "length": 14,
+   "unique": 1
+  },
+  {
+   "fieldname": "attach_recent_photo",
+   "fieldtype": "Attach Image",
+   "label": "Attach Recent Photo "
+  },
+  {
+   "fieldname": "photo_preview",
+   "fieldtype": "Image",
+   "label": "Photo Preview",
+   "options": "attach_recent_photo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_aadhar_card",
+   "fieldtype": "Attach",
+   "label": "Attach Aadhar Card"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "column_break_umpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ncem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_section_section",
+   "fieldtype": "Section Break",
+   "label": "Address Section"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-02 11:30:08.326636",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Tenant",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

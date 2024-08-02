@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MNTN-{####}-{shop}-{MM}-{YY}",
+ "creation": "2024-08-02 17:19:42.474303",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_x2bi",
+  "amended_from",
+  "section_break_kvep",
+  "shop",
+  "maintenance_date",
+  "column_break_vwmc",
+  "maintenance_cost",
+  "next_maintenance_date",
+  "section_break_qjzt",
+  "maintenance_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_x2bi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_kvep",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop"
+  },
+  {
+   "default": "Today",
+   "fieldname": "maintenance_date",
+   "fieldtype": "Date",
+   "label": "Maintenance Date"
+  },
+  {
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Maintenance Cost"
+  },
+  {
+   "fieldname": "maintenance_details",
+   "fieldtype": "Text Editor",
+   "label": "Maintenance Details"
+  },
+  {
+   "fieldname": "column_break_vwmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "section_break_qjzt",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-02 17:23:55.468810",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Maintenance Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

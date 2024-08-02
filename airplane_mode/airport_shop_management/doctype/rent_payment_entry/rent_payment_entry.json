@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PAY-{MM}-{YY}-{shop}-{####}",
+ "creation": "2024-08-02 16:42:19.455477",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_date",
+  "section_break_1kli",
+  "shop",
+  "payment_method",
+  "rent_paid",
+  "amended_from",
+  "column_break_nlkw",
+  "tenant",
+  "shop_rent",
+  "pending_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1kli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Payment Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nUPI\nNet Banking"
+  },
+  {
+   "fieldname": "rent_paid",
+   "fieldtype": "Currency",
+   "label": "Rent Paid"
+  },
+  {
+   "fieldname": "column_break_nlkw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "shop_rent",
+   "fieldtype": "Link",
+   "label": "Shop Rent",
+   "options": "Shop Rent"
+  },
+  {
+   "fieldname": "pending_rent",
+   "fieldtype": "Currency",
+   "label": "Pending Rent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-02 17:13:44.120038",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Rent Payment Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

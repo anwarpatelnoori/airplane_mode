@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{airport_code}",
+ "creation": "2024-08-02 11:36:22.433972",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "section_break_rjna",
+  "shop_number",
+  "airport",
+  "airport_code",
+  "last_maintenance_date",
+  "column_break_nqad",
+  "shop_name",
+  "area",
+  "next_maintenance_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Select",
+   "label": "Shop Category",
+   "options": "\nClothing  Stores\nBookstores and Newsstands\nRestaurants and Diners\nCurrency Exchange and Banks\nHealth and Pharmacy\u00a0Stores\nGift Shops Rent"
+  },
+  {
+   "description": "In sqft",
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOccupied\nAvailable\nUnder Mainenance"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "section_break_rjna",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nqad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "airport.code",
+   "fieldname": "airport_code",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Airport Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-02 14:14:35.554862",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

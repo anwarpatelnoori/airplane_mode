@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SR-{####}-{shop}-{MM}-{YY}-",
+ "creation": "2024-08-02 17:06:04.269998",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_eeww",
+  "rent_date",
+  "amended_from",
+  "column_break_gobx",
+  "status",
+  "section_break_qbwf",
+  "shop",
+  "shop_contract",
+  "rent_paid",
+  "rent_payment_entry",
+  "column_break_vaak",
+  "tenant",
+  "shop_rent",
+  "pending_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_eeww",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Rent",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_qbwf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fetch_from": "shop_contract.rent_amount",
+   "fetch_if_empty": 1,
+   "fieldname": "shop_rent",
+   "fieldtype": "Currency",
+   "label": "Shop Rent"
+  },
+  {
+   "fieldname": "rent_paid",
+   "fieldtype": "Currency",
+   "label": "Rent Paid"
+  },
+  {
+   "fieldname": "pending_rent",
+   "fieldtype": "Currency",
+   "label": "Pending Rent"
+  },
+  {
+   "fieldname": "shop_contract",
+   "fieldtype": "Link",
+   "label": "Shop Contract",
+   "options": "Shop Contract"
+  },
+  {
+   "fieldname": "rent_payment_entry",
+   "fieldtype": "Link",
+   "label": "Rent Payment Entry",
+   "options": "Rent Payment Entry"
+  },
+  {
+   "fieldname": "column_break_vaak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent_date",
+   "fieldtype": "Date",
+   "label": "Rent Date"
+  },
+  {
+   "fieldname": "column_break_gobx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCancelled\nPaid\nPartially Paid\nOverdue"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-02 17:18:20.634483",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Shop Rent",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
