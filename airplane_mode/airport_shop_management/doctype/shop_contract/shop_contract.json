@@ -8,17 +8,17 @@
  "field_order": [
   "section_break_bjxx",
   "tenant",
-  "rent_amount",
-  "contract_start_date",
-  "tenant_signature",
-  "signed_shop_contract",
-  "column_break_nsdp",
   "shop",
-  "payment_status",
+  "contract_start_date",
+  "column_break_nsdp",
+  "status",
+  "rent_amount",
   "contract_end_date",
-  "airport_authority_signature",
   "section_break_nstz",
   "terms_and_conditions",
+  "tenant_signature",
+  "airport_authority_signature",
+  "signed_shop_contract",
   "amended_from"
  ],
  "fields": [
@@ -48,49 +48,53 @@
    "fieldname": "shop",
    "fieldtype": "Link",
    "label": "Shop",
+   "link_filters": "[[\"Shop\",\"status\",\"=\",\"Available\"]]",
    "options": "Shop",
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.shop;",
    "fieldname": "contract_start_date",
    "fieldtype": "Date",
    "label": "Contract Start Date"
   },
   {
+   "depends_on": "eval:doc.shop;",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
   },
   {
-   "fieldname": "payment_status",
-   "fieldtype": "Select",
-   "label": "Payment Status",
-   "options": "\nPaid\nPartially Paid\nDue\nOverdue"
-  },
-  {
+   "depends_on": "eval:doc.contract_start_date && doc.contract_end_date;",
    "fieldname": "terms_and_conditions",
    "fieldtype": "Text Editor",
    "label": "Terms and Conditions"
   },
   {
+   "depends_on": "eval:doc.airport_authority_signature",
    "fieldname": "signed_shop_contract",
    "fieldtype": "Attach",
    "label": "Signed Shop Contract"
   },
   {
+   "depends_on": "eval:doc.terms_and_conditions",
    "fieldname": "tenant_signature",
    "fieldtype": "Signature",
    "label": "Tenant Signature"
   },
   {
+   "depends_on": "eval:doc.tenant_signature;",
    "fieldname": "airport_authority_signature",
    "fieldtype": "Signature",
    "label": "Airport Authority Signature"
   },
   {
+   "fetch_from": "shop.shop_rent",
+   "fetch_if_empty": 1,
    "fieldname": "rent_amount",
    "fieldtype": "Currency",
-   "label": "Rent Amount"
+   "label": "Rent Amount",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_nsdp",
@@ -99,12 +103,20 @@
   {
    "fieldname": "section_break_nstz",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Contract Status",
+   "options": "Draft\nOngoing\nExpired",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-02 13:09:49.425612",
+ "modified": "2024-08-03 14:52:34.530214",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Contract",

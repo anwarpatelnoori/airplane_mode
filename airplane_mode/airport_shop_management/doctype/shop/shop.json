@@ -47,6 +47,9 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "\nOccupied\nAvailable\nUnder Mainenance"
   },
@@ -93,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-03 02:40:20.544892",
+ "modified": "2024-08-03 14:20:10.972822",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",

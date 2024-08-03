@@ -7,39 +7,42 @@
  "engine": "InnoDB",
  "field_order": [
   "personal_details_section",
-  "first_name",
-  "aadhar_card_number",
-  "attach_aadhar_card",
   "column_break_umpi",
-  "last_name",
-  "phone_number",
-  "attach_recent_photo",
-  "column_break_ncem",
+  "first_name",
   "full_name",
-  "email",
-  "photo_preview",
-  "address_section_section",
+  "phone_number",
   "country",
+  "attach_aadhar_card",
+  "address",
+  "column_break_ncem",
+  "last_name",
+  "email",
+  "aadhar_card_number",
   "state",
-  "address"
+  "attach_recent_photo",
+  "column_break_fbrw",
+  "photo_preview"
  ],
  "fields": [
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "First Name",
    "reqd": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "Last Name"
   },
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Phone Number",
    "options": "Phone"
   },
@@ -53,17 +56,18 @@
   {
    "fieldname": "aadhar_card_number",
    "fieldtype": "Int",
-   "in_list_view": 1,
    "label": "Aadhar Card Number",
    "length": 14,
    "unique": 1
   },
   {
+   "depends_on": "eval:doc.attach_recent_photo",
    "fieldname": "attach_recent_photo",
    "fieldtype": "Attach Image",
    "label": "Attach Recent Photo "
   },
   {
+   "depends_on": "eval:doc.attach_recent_photo;",
    "fieldname": "photo_preview",
    "fieldtype": "Image",
    "label": "Photo Preview",
@@ -83,6 +87,7 @@
   {
    "fieldname": "state",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "State"
   },
   {
@@ -94,6 +99,7 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Read Only",
+   "in_list_view": 1,
    "label": "Full Name"
   },
   {
@@ -110,14 +116,13 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "address_section_section",
-   "fieldtype": "Section Break",
-   "label": "Address Section"
+   "fieldname": "column_break_fbrw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-02 11:30:08.326636",
+ "modified": "2024-08-03 14:18:00.094855",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Tenant",
