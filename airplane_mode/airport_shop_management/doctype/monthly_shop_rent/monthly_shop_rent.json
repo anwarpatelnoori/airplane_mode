@@ -1,5 +1,8 @@
 {
  "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:SR-{####}-{shop}-{MM}-{YY}",
  "creation": "2024-08-02 17:06:04.269998",
@@ -135,8 +138,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-04 17:57:45.251591",
+ "links": [
+  {
+   "link_doctype": "Rent Payment Entry",
+   "link_fieldname": "shop_rent"
+  }
+ ],
+ "modified": "2024-08-05 00:17:36.770662",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Monthly Shop Rent",

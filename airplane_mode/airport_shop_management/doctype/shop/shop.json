@@ -95,8 +95,21 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-08-04 15:40:21.796993",
+ "links": [
+  {
+   "link_doctype": "Shop Contract",
+   "link_fieldname": "shop"
+  },
+  {
+   "link_doctype": "Monthly Shop Rent",
+   "link_fieldname": "shop"
+  },
+  {
+   "link_doctype": "Rent Payment Entry",
+   "link_fieldname": "shop"
+  }
+ ],
+ "modified": "2024-08-05 00:09:03.080930",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",

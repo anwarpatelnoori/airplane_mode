@@ -113,8 +113,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-04 17:52:30.432508",
+ "links": [
+  {
+   "link_doctype": "Monthly Shop Rent",
+   "link_fieldname": "rent_payment_entry"
+  }
+ ],
+ "modified": "2024-08-05 00:19:13.616191",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Rent Payment Entry",

@@ -121,8 +121,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-04 16:03:21.878590",
+ "links": [
+  {
+   "link_doctype": "Monthly Shop Rent",
+   "link_fieldname": "shop_contract"
+  }
+ ],
+ "modified": "2024-08-05 00:20:45.989317",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Contract",
