@@ -1,9 +1,9 @@
 # Copyright (c) 2024, anwarpatelnoori and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 
-class ShopRent(Document):
-	pass
+class MonthlyShopRent(Document):
+    pass

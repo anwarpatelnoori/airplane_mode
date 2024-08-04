@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "enable_rent_reminders",
+  "on_hold_days",
   "column_break_vrtg",
   "reminder_frequency",
   "section_break_amfl",
@@ -84,12 +85,17 @@
    "fieldtype": "Currency",
    "label": " Currency Exchange and Banks",
    "precision": "2"
+  },
+  {
+   "fieldname": "on_hold_days",
+   "fieldtype": "Duration",
+   "label": "On Hold Days"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-03 03:01:34.071670",
+ "modified": "2024-08-04 16:02:51.272586",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Management Settings",

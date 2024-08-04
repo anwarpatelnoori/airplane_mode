@@ -7,14 +7,16 @@
  "engine": "InnoDB",
  "field_order": [
   "payment_date",
-  "section_break_1kli",
-  "shop",
+  "column_break_oxwy",
   "payment_method",
+  "section_break_1kli",
+  "shop_rent",
+  "shop",
   "rent_paid",
   "amended_from",
   "column_break_nlkw",
   "tenant",
-  "shop_rent",
+  "rent_amount",
   "pending_rent"
  ],
  "fields": [
@@ -33,15 +35,21 @@
    "search_index": 1
   },
   {
+   "default": "Today",
    "fieldname": "payment_date",
    "fieldtype": "Date",
    "label": "Payment Date"
   },
   {
+   "fetch_from": "shop_rent.shop",
    "fieldname": "shop",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Shop",
-   "options": "Shop"
+   "options": "Shop",
+   "read_only": 1
   },
   {
    "fieldname": "payment_method",
@@ -50,36 +58,63 @@
    "options": "Cash\nUPI\nNet Banking"
   },
   {
+   "depends_on": "eval: doc.shop_rent",
    "fieldname": "rent_paid",
    "fieldtype": "Currency",
-   "label": "Rent Paid"
+   "label": "Rent Paid",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nlkw",
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "shop_rent.tenant",
+   "fetch_if_empty": 1,
    "fieldname": "tenant",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Tenant",
-   "options": "Tenant"
+   "options": "Tenant",
+   "read_only": 1
   },
   {
    "fieldname": "shop_rent",
    "fieldtype": "Link",
-   "label": "Shop Rent",
-   "options": "Shop Rent"
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Monthly Shop Rent",
+   "link_filters": "[[\"Monthly Shop Rent\",\"status\",\"in\",[\"Unpaid\",\"Partially Paid\",\"Overdue\"]]]",
+   "options": "Monthly Shop Rent",
+   "reqd": 1
   },
   {
+   "fetch_from": "shop_rent.shop_rent",
+   "fetch_if_empty": 1,
    "fieldname": "pending_rent",
    "fieldtype": "Currency",
-   "label": "Pending Rent"
+   "label": "Pending Rent",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop_rent.shop_rent",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oxwy",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-02 17:13:44.120038",
+ "modified": "2024-08-04 17:52:30.432508",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Rent Payment Entry",

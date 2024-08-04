@@ -51,7 +51,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "\nOccupied\nAvailable\nUnder Mainenance"
+   "options": "\nOccupied\nAvailable\nUnder Maintenance\nOn Hold"
   },
   {
    "fieldname": "last_maintenance_date",
@@ -96,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-03 14:20:10.972822",
+ "modified": "2024-08-04 15:40:21.796993",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",

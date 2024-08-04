@@ -1,7 +1,7 @@
 // Copyright (c) 2024, anwarpatelnoori and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Shop Rent", {
+// frappe.ui.form.on("Monthly Shop Rent", {
 // 	refresh(frm) {
 
 // 	},
