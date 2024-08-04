@@ -15,14 +15,15 @@
   "column_break_gobx",
   "status",
   "section_break_qbwf",
-  "shop_contract",
-  "shop",
-  "rent_payment_entry",
-  "rent_paid",
-  "column_break_vaak",
   "tenant",
+  "shop_contract",
   "shop_rent",
-  "pending_rent"
+  "pending_rent",
+  "column_break_vaak",
+  "tenant_email",
+  "shop",
+  "rent_paid",
+  "rent_payment_entry"
  ],
  "fields": [
   {
@@ -134,6 +135,14 @@
    "label": "Status",
    "options": "Unpaid\nPaid\nPartially Paid\nOverdue",
    "read_only": 1
+  },
+  {
+   "fetch_from": "tenant.email",
+   "fetch_if_empty": 1,
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -144,7 +153,7 @@
    "link_fieldname": "shop_rent"
   }
  ],
- "modified": "2024-08-05 00:17:36.770662",
+ "modified": "2024-08-05 00:40:23.836286",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Monthly Shop Rent",
