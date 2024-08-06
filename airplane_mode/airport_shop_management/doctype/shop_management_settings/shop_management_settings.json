@@ -87,15 +87,17 @@
    "precision": "2"
   },
   {
+   "default": "3 Days",
    "fieldname": "on_hold_days",
-   "fieldtype": "Duration",
-   "label": "On Hold Days"
+   "fieldtype": "Select",
+   "label": "On Hold Days",
+   "options": "3 Days\n6 Days\n10 Days"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-04 16:02:51.272586",
+ "modified": "2024-08-07 01:04:59.814350",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Management Settings",
