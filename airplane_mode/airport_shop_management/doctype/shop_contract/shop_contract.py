@@ -14,6 +14,7 @@ class ShopContract(Document):
 				if(contract_start_date<=today_date <=contract_end_date):
 					self.status = 'Ongoing'
 				elif (today_date>contract_end_date):
-					frappe.throw('Contract End date should be greate than Today date')
+					self.status = 'Expired'
+					# frappe.throw('Contract End date should be greate than Today date')
 					pass
 				frappe.set_value('Shop',self.shop,'status','Occupied')

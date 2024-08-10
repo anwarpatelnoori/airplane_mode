@@ -7,6 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "status",
+  "is_published",
+  "route",
   "section_break_rjna",
   "shop_number",
   "airport",
@@ -16,7 +18,10 @@
   "shop_category",
   "airport_code",
   "next_maintenance_date",
-  "area"
+  "area",
+  "column_break_tohc",
+  "shop_image",
+  "image_pkhv"
  ],
  "fields": [
   {
@@ -92,9 +97,36 @@
    "fieldtype": "Currency",
    "label": "Shop Rent",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tohc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_image",
+   "fieldtype": "Attach Image",
+   "label": "Shop Image"
+  },
+  {
+   "fieldname": "image_pkhv",
+   "fieldtype": "Image",
+   "options": "shop_image"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Shop Contract",
@@ -109,7 +141,7 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-08-05 00:09:03.080930",
+ "modified": "2024-08-10 16:22:00.481613",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",
@@ -129,6 +161,7 @@
    "write": 1
   }
  ],
+ "route": "route",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
