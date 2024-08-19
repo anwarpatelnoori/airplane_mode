@@ -23,7 +23,9 @@
   "tenant_email",
   "shop",
   "rent_paid",
-  "rent_payment_entry"
+  "rent_payment_entry",
+  "section_break_olkc",
+  "rent_payment_entry_logs"
  ],
  "fields": [
   {
@@ -78,7 +80,7 @@
   },
   {
    "allow_on_submit": 1,
-   "depends_on": "eval: doc.shop_contract && doc.rent_payment_entry",
+   "depends_on": "eval: doc.shop_contract",
    "fieldname": "rent_paid",
    "fieldtype": "Currency",
    "label": "Rent Paid",
@@ -86,7 +88,7 @@
   },
   {
    "allow_on_submit": 1,
-   "depends_on": "eval: doc.shop_contract && doc.rent_payment_entry",
+   "depends_on": "eval: doc.shop_contract",
    "fieldname": "pending_rent",
    "fieldtype": "Currency",
    "label": "Pending Rent",
@@ -143,6 +145,18 @@
    "fieldtype": "Data",
    "label": "Tenant Email",
    "options": "Email"
+  },
+  {
+   "fieldname": "section_break_olkc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rent_payment_entry_logs",
+   "fieldtype": "Table",
+   "label": "Rent Payment Entry Logs",
+   "options": "Shop Rent Installment",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -153,7 +167,7 @@
    "link_fieldname": "shop_rent"
   }
  ],
- "modified": "2024-08-05 00:40:23.836286",
+ "modified": "2024-08-19 23:46:00.545544",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Monthly Shop Rent",

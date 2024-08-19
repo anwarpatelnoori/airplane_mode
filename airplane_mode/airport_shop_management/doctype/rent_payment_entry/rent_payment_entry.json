@@ -92,7 +92,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "shop_rent.shop_rent",
+   "fetch_from": "shop_rent.pending_rent",
    "fetch_if_empty": 1,
    "fieldname": "pending_rent",
    "fieldtype": "Currency",
@@ -119,7 +119,7 @@
    "link_fieldname": "rent_payment_entry"
   }
  ],
- "modified": "2024-08-05 00:19:13.616191",
+ "modified": "2024-08-11 02:08:48.774520",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Rent Payment Entry",

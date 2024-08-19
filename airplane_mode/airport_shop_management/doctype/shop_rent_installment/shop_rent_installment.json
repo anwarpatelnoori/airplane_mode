@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-11 02:22:55.607687",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rent_payment_entry",
+  "rent_amount",
+  "rent_paid",
+  "pending_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "rent_payment_entry",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Rent Payment Entry",
+   "options": "Rent Payment Entry"
+  },
+  {
+   "fetch_from": "rent_payment_entry.rent_paid",
+   "fetch_if_empty": 1,
+   "fieldname": "rent_paid",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Rent Paid"
+  },
+  {
+   "fetch_from": "rent_payment_entry.rent_amount",
+   "fetch_if_empty": 1,
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "rent_payment_entry.pending_rent",
+   "fetch_if_empty": 1,
+   "fieldname": "pending_rent",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Pending Rent",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-19 23:37:42.773400",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Shop Rent Installment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
