@@ -7,8 +7,9 @@ from frappe.model.document import Document
 
 class RentPaymentEntry(Document):
 	def before_save(self):
-		if(self.rent_paid>self.rent_amount):
-			frappe.throw(f'Paid Amount {self.rent_paid} is greater than Rent Amount {self.rent_amount}')
+		if((self.rent_paid>self.rent_amount and self.pending_rent==0) or (self.rent_paid>self.pending_rent and not self.pending_rent==0)):
+			frappe.throw(f'Paid Amount {self.rent_paid} is greater than  Rent Amount')
+			# pass
 		elif(self.rent_paid <= 0):
 			frappe.throw('You Must Pay Rent')
 	def before_submit(self):

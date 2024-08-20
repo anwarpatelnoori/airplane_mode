@@ -23,7 +23,7 @@
   "tenant_email",
   "shop",
   "rent_paid",
-  "rent_payment_entry",
+  "rent_payment_entry_main",
   "section_break_olkc",
   "rent_payment_entry_logs"
  ],
@@ -106,14 +106,6 @@
    "reqd": 1
   },
   {
-   "allow_on_submit": 1,
-   "fieldname": "rent_payment_entry",
-   "fieldtype": "Link",
-   "label": "Rent Payment Entry",
-   "options": "Rent Payment Entry",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_vaak",
    "fieldtype": "Column Break"
   },
@@ -157,6 +149,14 @@
    "label": "Rent Payment Entry Logs",
    "options": "Shop Rent Installment",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rent_payment_entry_main",
+   "fieldtype": "Link",
+   "label": "Rent Payment Entry",
+   "options": "Rent Payment Entry",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -167,7 +167,7 @@
    "link_fieldname": "shop_rent"
   }
  ],
- "modified": "2024-08-19 23:46:00.545544",
+ "modified": "2024-08-21 00:42:49.533087",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Monthly Shop Rent",

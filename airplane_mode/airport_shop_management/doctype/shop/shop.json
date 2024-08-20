@@ -141,7 +141,7 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-08-10 16:22:00.481613",
+ "modified": "2024-08-21 00:14:54.835173",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",
@@ -164,5 +164,14 @@
  "route": "route",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Available"
+  },
+  {
+   "color": "Blue",
+   "title": "Occupied"
+  }
+ ]
 }

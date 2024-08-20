@@ -7,10 +7,10 @@ from datetime import date
 import calendar
 fake = Faker('en_IN')
 
-def import_all_date():
+def import_all_data():
     fake_airport()
     fake_shops()
-    fake_tenant
+    fake_tenant()
     fake_shop_contract()
 
 def fake_airport():
@@ -42,9 +42,9 @@ def fake_shops():
     for a in current_airport:
         airport_name.append(a['name'])
     shop_category = ['Clothing Stores','Bookstores and Newsstands','Restaurants and Diners','Currency Exchange and Banks','Health and Pharmacy Stores', 'Gift Shops Rent']
-    for i in all_shop_image_urls:
+    for j in all_shop_image_urls:
         ltr_4 = ''
-        for i in range(4):
+        for k in range(4):
             ltr_4+= random.choice(string.ascii_uppercase)
             shop_number = f'{ltr_4}{random.randint(1,99)}'
             area = round(random.uniform(1,999),2)
@@ -54,7 +54,7 @@ def fake_shops():
         new_shop.shop_category = random.choice(shop_category)
         new_shop.airport = random.choice(airport_name)
         new_shop.area = area
-        new_shop.shop_image = i
+        new_shop.shop_image = j
         new_shop.insert(ignore_permissions = True)
     frappe.db.commit()
     print('30 Shops Created')
@@ -102,22 +102,28 @@ def fake_shop_contract():
     start_year = 2024
     today_date = frappe.utils.getdate()
     for i in range(len(contracted_tenant)):
+        # random cnotract duration
         start_month = random.randint(1, 12)
         contract_start_date = date(start_year, start_month, 1)
         end_month = random.randint(1, 24)
         contract_end_date = frappe.utils.add_months(contract_start_date, end_month)
 
+        # create 20 Contract
         new_contract = frappe.new_doc('Shop Contract')
         new_contract.tenant = contracted_tenant[i]['name']
         new_contract.shop = availbale_shop[i]['name']
         new_contract.contract_start_date = contract_start_date
         new_contract.contract_end_date  = contract_end_date
 
+        # set contract status
         if(contract_start_date<=today_date <=contract_end_date):
             new_contract.status = 'Ongoing'
         elif (today_date>contract_end_date):
             new_contract.status = 'Expired'
 
+        # shop status occupied
+        frappe.db.set_value('Shop',availbale_shop[i]['name'],'status','Occupied')
+        
         new_contract.submit()
     frappe.db.commit()
     print('20 Contracts Created')
