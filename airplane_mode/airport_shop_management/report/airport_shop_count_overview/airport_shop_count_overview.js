@@ -18,5 +18,11 @@ frappe.query_reports["Airport Shop Count Overview"] = {
 			value = view_shop_button
 		}
 		return default_formatter(value, row, column, data);
+	},
+	onload(report) {		
+		setTimeout(function() {
+			$('.dt-row.dt-row-filter').remove(); 
+		}, 50);
 	}
+	
 };

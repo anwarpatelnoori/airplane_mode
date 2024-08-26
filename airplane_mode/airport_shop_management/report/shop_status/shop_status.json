@@ -1,5 +1,5 @@
 {
- "add_total_row": 1,
+ "add_total_row": 0,
  "columns": [
   {
    "fieldname": "name",
@@ -7,12 +7,6 @@
    "label": "Shop Name",
    "options": "Shop",
    "width": 180
-  },
-  {
-   "fieldname": "shop_number",
-   "fieldtype": "Data",
-   "label": "Shop Number",
-   "width": 100
   },
   {
    "fieldname": "airport",
@@ -54,14 +48,14 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-08-26 19:58:35.831126",
+ "modified": "2024-08-26 23:54:12.470890",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Status",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT\n    name,shop_number,airport,shop_category,shop_rent,area,status\nFROM \n    `tabShop`",
- "ref_doctype": "About Us Settings",
+ "query": "SELECT\n    name,airport,shop_category,shop_rent,area,status\nFROM \n    `tabShop`",
+ "ref_doctype": "Shop",
  "report_name": "Shop Status",
  "report_type": "Query Report",
  "roles": [

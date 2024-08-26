@@ -17,7 +17,7 @@ def all_cron_jobs():
 
 def rent_reminder():
     shop_manage_sett = frappe.get_doc('Shop Management Settings')
-    if(shop_manage_sett==1):
+    if(shop_manage_sett.enable_rent_reminders==1):
         all_ongoing_contracts = frappe.get_list("Shop Contract", fields=["name", "contract_start_date","contract_end_date"], filters = {"status":"Ongoing"})
         current_datetime = frappe.utils.get_datetime()
         current_date = current_datetime.date()
@@ -102,23 +102,3 @@ def create_month_rent_doctype():
             contract_status = frappe.db.get_value('Shop Contract',contract_name,'status')
             if (contract_status == 'Ongoing'):
                 frappe.db.set_value('Shop Contract',contract_name,'status','Expired')  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
