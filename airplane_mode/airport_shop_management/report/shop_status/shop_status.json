@@ -1,0 +1,72 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "name",
+   "fieldtype": "Link",
+   "label": "Shop Name",
+   "options": "Shop",
+   "width": 180
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop Number",
+   "width": 100
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "width": 150
+  },
+  {
+   "fieldname": "shop_category",
+   "fieldtype": "Data",
+   "label": "Shop Category",
+   "width": 220
+  },
+  {
+   "fieldname": "shop_rent",
+   "fieldtype": "Currency",
+   "label": "Shop Rent",
+   "width": 120
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area",
+   "width": 100
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "width": 80
+  }
+ ],
+ "creation": "2024-08-26 18:52:08.259004",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-08-26 19:58:35.831126",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Shop Status",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    name,shop_number,airport,shop_category,shop_rent,area,status\nFROM \n    `tabShop`",
+ "ref_doctype": "About Us Settings",
+ "report_name": "Shop Status",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Website Manager"
+  }
+ ]
+}
