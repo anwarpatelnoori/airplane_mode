@@ -8,6 +8,8 @@
  "field_order": [
   "payment_date",
   "column_break_oxwy",
+  "rent_date",
+  "column_break_bjdv",
   "payment_method",
   "section_break_1kli",
   "shop_rent",
@@ -109,6 +111,17 @@
   {
    "fieldname": "column_break_oxwy",
    "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "shop_rent.rent_date",
+   "fieldname": "rent_date",
+   "fieldtype": "Date",
+   "label": "Rent Date"
+  },
+  {
+   "fieldname": "column_break_bjdv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -122,7 +135,7 @@
    "table_fieldname": "rent_payment_entry_logs"
   }
  ],
- "modified": "2024-08-21 00:31:58.750675",
+ "modified": "2024-08-29 01:59:30.229100",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Rent Payment Entry",
