@@ -26,7 +26,9 @@
   "date_of_departure",
   "duration",
   "column_break_lpwc",
-  "time_of_departure"
+  "time_of_departure",
+  "flight_crew_section",
+  "flight_crew_members"
  ],
  "fields": [
   {
@@ -149,6 +151,17 @@
    "fieldname": "is_published",
    "fieldtype": "Check",
    "label": "Is Published"
+  },
+  {
+   "fieldname": "flight_crew_section",
+   "fieldtype": "Section Break",
+   "label": "Flight Crew"
+  },
+  {
+   "fieldname": "flight_crew_members",
+   "fieldtype": "Table",
+   "label": "Flight Crew Members",
+   "options": "Flight Crew Members"
   }
  ],
  "has_web_view": 1,
@@ -161,7 +174,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-07-30 13:51:58.601234",
+ "modified": "2024-08-29 18:19:54.047532",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",

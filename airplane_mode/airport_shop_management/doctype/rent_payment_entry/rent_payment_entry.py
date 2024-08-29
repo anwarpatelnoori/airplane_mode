@@ -39,5 +39,5 @@ class RentPaymentEntry(Document):
 			# total_shop_rent.rent_payment_entry_logs[-1].pending_rent =0.000
 		elif total_shop_rent.rent_paid <= self.rent_amount:
 			total_shop_rent.status = 'Partially Paid'
-		total_shop_rent.save()
+		total_shop_rent.save(ignore_permissions =True)
 		frappe.db.commit()
