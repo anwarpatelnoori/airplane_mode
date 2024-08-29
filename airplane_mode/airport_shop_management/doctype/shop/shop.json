@@ -12,12 +12,10 @@
   "section_break_rjna",
   "shop_number",
   "airport",
-  "last_maintenance_date",
   "shop_rent",
   "column_break_nqad",
   "shop_category",
   "airport_code",
-  "next_maintenance_date",
   "area",
   "column_break_tohc",
   "shop_image",
@@ -57,16 +55,6 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "\nOccupied\nAvailable\nUnder Maintenance\nOn Hold"
-  },
-  {
-   "fieldname": "last_maintenance_date",
-   "fieldtype": "Date",
-   "label": "Last Maintenance Date"
-  },
-  {
-   "fieldname": "next_maintenance_date",
-   "fieldtype": "Date",
-   "label": "Next Maintenance Date"
   },
   {
    "fieldname": "section_break_rjna",
@@ -141,7 +129,7 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-08-21 00:14:54.835173",
+ "modified": "2024-08-30 00:30:41.527714",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop",

@@ -126,12 +126,14 @@
    "allow_on_submit": 1,
    "fieldname": "test_contract_start",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Test Contract Start"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "test_contract_end",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Test Contract End"
   }
  ],
@@ -143,7 +145,7 @@
    "link_fieldname": "shop_contract"
   }
  ],
- "modified": "2024-08-05 22:42:06.037706",
+ "modified": "2024-08-30 00:38:01.507269",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Contract",
