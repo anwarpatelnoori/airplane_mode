@@ -8,10 +8,14 @@
  "field_order": [
   "section_break_avwo",
   "passenger",
-  "status",
   "column_break_bodr",
-  "flight",
   "seat",
+  "section_break_nxer",
+  "flight",
+  "column_break_wncl",
+  "gate_number",
+  "column_break_ybhg",
+  "status",
   "section_break_slzr",
   "source_airport_code",
   "amended_from",
@@ -160,15 +164,37 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "seat",
    "fieldtype": "Data",
-   "label": "Seat"
+   "label": "Seat",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "flight.gate_number",
+   "fetch_if_empty": 1,
+   "fieldname": "gate_number",
+   "fieldtype": "Read Only",
+   "label": "Gate Number"
+  },
+  {
+   "fieldname": "section_break_nxer",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wncl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ybhg",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-30 13:53:19.632725",
+ "modified": "2024-08-29 22:59:21.802481",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",

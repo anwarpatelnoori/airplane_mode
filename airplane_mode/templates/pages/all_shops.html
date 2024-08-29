@@ -144,39 +144,38 @@
         const citySelect = document.getElementById('citySelect');
         const shopTypeSelect = document.getElementById('shopTypeSelect');
         const shopsGrid = document.getElementById('shopsGrid');
-
+    
         citySelect.addEventListener('change', filterShops);
         shopTypeSelect.addEventListener('change', filterShops);
-
+    
         function filterShops() {
             const city = citySelect.value.trim();
             const shopType = shopTypeSelect.value.trim();
-
-            const shops = shopsGrid.querySelectorAll('.shop-container');
-
+    
+            const shops = shopsGrid.querySelectorAll('.col-md-3');
+    
             shops.forEach(shop => {
                 const shopCity = shop.querySelector('.shop-airport').textContent.trim().split(': ')[1];
                 const shopTypeValue = shop.querySelector('.shop-address').textContent.trim().split(': ')[1];
-
+    
                 let showShop = true;
-
+    
                 if (city && shopCity !== city) {
                     showShop = false;
                 }
-
+    
                 if (shopType && shopTypeValue !== shopType) {
                     showShop = false;
                 }
-
+    
                 shop.style.display = showShop ? 'block' : 'none';
             });
-
-            // Re-layout the grid after filtering
-            shopsGrid.classList.remove('row');
-            setTimeout(() => {
-                shopsGrid.classList.add('row');
-            }, 0);
+    
+            
+            shopsGrid.style.display = 'none'; 
+            void shopsGrid.offsetWidth;
+            shopsGrid.style.display = '';
         }
-    </script>
+    </script>    
 </body>
 {% endblock %}

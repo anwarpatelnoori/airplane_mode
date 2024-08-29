@@ -27,6 +27,7 @@
   "duration",
   "column_break_lpwc",
   "time_of_departure",
+  "gate_number",
   "flight_crew_section",
   "flight_crew_members"
  ],
@@ -162,6 +163,14 @@
    "fieldtype": "Table",
    "label": "Flight Crew Members",
    "options": "Flight Crew Members"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "gate_number",
+   "fieldtype": "Link",
+   "label": "Gate Number",
+   "options": "Airport Gate",
+   "read_only_depends_on": "eval:doc.docstatus==1;"
   }
  ],
  "has_web_view": 1,
@@ -174,7 +183,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-08-29 18:19:54.047532",
+ "modified": "2024-08-29 22:49:57.593113",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",
