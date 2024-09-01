@@ -8,7 +8,7 @@ import calendar
 fake = Faker('en_IN')
 
 def import_all_data():
-    fake_airport()
+    # fake_airport()
     fake_shops()
     fake_tenant()
     fake_shop_contract()
@@ -150,3 +150,11 @@ def update_shop_image():
         print("Images attached successfully!")
     else:
         print("The number of shops and images do not match.")
+
+# SET SQL_SAFE_UPDATES = 0;
+# delete from `tabTenant`;
+# delete from `tabShop`;
+# delete from `tabShop Contract`;
+# delete from `tabMonthly Shop Rent`;
+# delete from `tabRent Payment Entry`;
+# SET SQL_SAFE_UPDATES = 1;

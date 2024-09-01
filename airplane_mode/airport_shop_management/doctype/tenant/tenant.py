@@ -15,4 +15,4 @@ def full_name_and_email(doc):
 		doc.full_name = f"{doc.first_name} {doc.last_name}"
 	else:
 		doc.full_name = doc.first_name
-	doc.email = f"anwar+{doc.first_name.lower()}@standardtouch.com"
+	doc.email = f"anwar+{doc.first_name.lower().replace(' ','')}@standardtouch.com"

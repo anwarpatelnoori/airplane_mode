@@ -10,11 +10,20 @@ import random
 class ShopContract(Document):
 	def before_save(self):
 		contract_status(self)
-		rent_payment_entry()
-	def after_save(self):
-		pass
-	def before_submit(self):
-		create_monthly_shop_rent(self)
+	def on_submit(self):
+		current_contract = frappe.get_doc('Shop Contract',self.name)
+		diff = frappe.utils.month_diff(current_contract.contract_end_date,current_contract.contract_start_date)
+		contract_start_date = current_contract.contract_start_date
+		for i in range(diff):
+			rent = frappe.new_doc('Monthly Shop Rent')
+			rent.shop_contract = self.name
+			rent.rent_date = contract_start_date
+			rent.submit()
+			contract_start_date=frappe.utils.add_months(contract_start_date, 1)
+		frappe.db.commit()
+		frappe.msgprint(f'{diff} Monthly Shop Rent Doctypes are Created')
+
+
 def contract_status(self):
 	today_date = frappe.utils.getdate()
 	contract_start_date = frappe.utils.getdate(self.contract_start_date)
@@ -26,6 +35,8 @@ def contract_status(self):
 		# frappe.throw('Contract End date should be greate than Today date')
 		pass
 	frappe.set_value('Shop',self.shop,'status','Occupied')
+
+	
 def create_monthly_shop_rent(doc):
 	current_contract = frappe.get_doc('Shop Contract',doc.name)
 	diff = frappe.utils.month_diff(current_contract.contract_end_date,current_contract.contract_start_date)
