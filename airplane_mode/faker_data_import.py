@@ -8,6 +8,7 @@ import calendar
 fake = Faker('en_IN')
 
 def import_all_data():
+    print("""Making up funny fake people to test the app—it's like a having imaginary friends for practice!""")
     fake_airport()
     fake_shops()
     fake_tenant()
@@ -27,7 +28,7 @@ def fake_airport():
         airport.country = country
         airport.insert(ignore_permissions = True)
     frappe.db.commit()
-    print('6 Airport Created')
+    print('6 Fake Airport Created')
 
 def fake_shops():
     shop_url = "https://api.unsplash.com/search/photos?client_id=-0IYW0fhhCOlRoB79UX_tZeAyjErmCf4ZANKamNxO7s&query=shop&per_page=30"
@@ -57,7 +58,7 @@ def fake_shops():
         new_shop.shop_image = j
         new_shop.insert(ignore_permissions = True)
     frappe.db.commit()
-    print('30 Shops Created')
+    print('30 Fake Shops Created')
 
 def fake_tenant():
     url = "https://api.unsplash.com/search/photos?client_id=-0IYW0fhhCOlRoB79UX_tZeAyjErmCf4ZANKamNxO7s&query=portrait&per_page=30"
@@ -92,7 +93,7 @@ def fake_tenant():
         new_tenant.address =tenant_address
         new_tenant.insert(ignore_permissions=True)
     frappe.db.commit()
-    print('30 Tenants  Created')
+    print('30 fake Tenants  Created Using Unsplash api')
 
 def fake_shop_contract():
     tenant = frappe.db.get_all('Tenant',fields = ['name'])
@@ -126,7 +127,7 @@ def fake_shop_contract():
         
         new_contract.submit()
     frappe.db.commit()
-    print('20 Contracts Created')
+    print('20 Fake Contracts Created')
 
 def update_shop_image():
     shop_url = "https://api.unsplash.com/search/photos?client_id=-0IYW0fhhCOlRoB79UX_tZeAyjErmCf4ZANKamNxO7s&query=shop&per_page=30"    
@@ -150,6 +151,20 @@ def update_shop_image():
         print("Images attached successfully!")
     else:
         print("The number of shops and images do not match.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # SET SQL_SAFE_UPDATES = 0;
 # delete from `tabTenant`;
