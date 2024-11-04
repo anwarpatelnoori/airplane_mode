@@ -8,7 +8,7 @@ import calendar
 fake = Faker('en_IN')
 
 def import_all_data():
-    # fake_airport()
+    fake_airport()
     fake_shops()
     fake_tenant()
     fake_shop_contract()
