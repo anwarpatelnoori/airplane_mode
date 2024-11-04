@@ -73,6 +73,12 @@ website_generators = ["Airplane Flight"]
 # before_install = "airplane_mode.install.before_install"
 after_install = "airplane_mode.faker_data_import.import_all_data"
 
+fixtures = [
+    {
+        "dt":"Workspace", "filters":[["name","=","Airplane Mode"]]
+    },
+]
+
 # Uninstallation
 # ------------
 
